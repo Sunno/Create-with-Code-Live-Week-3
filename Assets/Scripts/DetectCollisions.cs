@@ -7,7 +7,7 @@ public class DetectCollisions : MonoBehaviour
     static private int animalsFed = 0;
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        transform.Rotate(Vector3.up, 180f);
         Destroy(other.gameObject);
         animalsFed++;
         Debug.Log("Animals fed: " + animalsFed);
